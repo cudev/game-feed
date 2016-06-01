@@ -56,6 +56,8 @@ foreach ($games as $game) {
 }
 ```
 
+---
+
 A received game might be in any format from API or RSS (*usually, it's some sort of a string*), what is not quite useful
 most of a time. After `json_decode()`, for example:
 ```php
@@ -77,6 +79,9 @@ array(10) {
   'category'    => string(6) "Action"
 }
 ```
+
+---
+
 Shipped retrievers allow usage of special transformers (*callables*) for altering received games to a desired format.
 An anonymous function, in the example below, will be called on every game,
 though any class with `__invoke($unprocessedGame)` method signature can be used.
@@ -98,6 +103,8 @@ foreach (Games::from($spilgames) as $game) {
     // ...
 }
 ```
+
+---
 
 Retrievers in the package try to fetch games as lazily as possible. In addition, it's never too bad
 to make use of some caching. Provided retrievers can utilise any PSR-6 compliant library.
@@ -129,6 +136,8 @@ foreach (Games::from($spilgames) as $game) {
     // ...
 }
 ```
+
+---
 
 And lastly, if something goes wrong `RetrieverException` is thrown
 ```php
