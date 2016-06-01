@@ -1,8 +1,11 @@
 {
   "name": "cudev/game-feed",
-  "description": "Client to a popular games feed for browser",
+  "description": "Library for retrieving browser games from public feeds",
+  "keywords": ["game", "client", "feed", "games", "spilgames", "arcade"],
+  "homepage": "https://github.com/cudev/game-feed",
   "license": "MIT",
   "require": {
+    "php": "^7.0",
     "guzzlehttp/guzzle": "~6.0",
     "psr/cache": "^1.0"
   },
