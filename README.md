@@ -27,7 +27,7 @@ interface RetrieverInterface extends Countable
     public function retrieve(): Generator;
 }
 ```
-Main purpose of the interface is to retrieve a game from a provider and yield it. An implementer must
+Main purpose of the interface is to retrieve a game from a provider and `yield` it. An implementer must
 also be able to count all games from a provider.
 
 Package is shipped with a few retrievers for popular providers such as [Spilgames](http://www.spilgames.com/).
