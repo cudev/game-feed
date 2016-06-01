@@ -1,6 +1,17 @@
 # Game Feed
 **:video_game: Library for retrieving browser games from public feeds**
 
+## Requirements
+- php 7
+- Guzzle 6
+
+## Install
+Via Composer
+
+``` bash
+$ composer require :vendor/:package_name
+```
+
 ## Overview
 
 Package consists of a bunch of classes that implement `RetrieverInterface` and a `Games` class on its own.
