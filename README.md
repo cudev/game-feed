@@ -9,7 +9,7 @@
 Via Composer
 
 ``` bash
-$ composer require :vendor/:package_name
+$ composer require cudev/game-feed
 ```
 
 ## Overview
