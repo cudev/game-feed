@@ -106,8 +106,8 @@ foreach (Games::from($spilgames) as $game) {
 
 ---
 
-Retrievers in the package try to fetch games as lazily as possible. In addition, it's never too bad
-to make use of some caching. Provided retrievers can utilise any PSR-6 compliant library.
+Retrievers in the package try to fetch games as lazily as possible. However, a little caching never hurt anyone (arguably).
+Provided retrievers can utilise any PSR-6 compliant library.
 
 Using [Stash](http://www.stashphp.com/), for example:
 ```php
@@ -139,7 +139,7 @@ foreach (Games::from($spilgames) as $game) {
 
 ---
 
-And lastly, if something goes wrong `RetrieverException` is thrown
+And lastly, if something goes wrong, `RetrieverException` is thrown
 ```php
 <?php
 use GameFeed\Games;
