@@ -1,0 +1,28 @@
+{
+  "name": "cudev/game-feed",
+  "description": "Client to a popular games feed for browser",
+  "license": "MIT",
+  "require": {
+    "guzzlehttp/guzzle": "~6.0",
+    "psr/cache": "^1.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.5"
+  },
+  "suggest": {
+    "tedivm/stash": "Allows PSR-6 compliant caching"
+  },
+  "autoload": {
+    "psr-4": {
+      "GameFeed\\": "src/"
+    }
+  },
+  "scripts": {
+    "check": [
+      "@cs",
+      "@test"
+    ],
+    "cs": "phpcs",
+    "cs-fix": "phpcbf"
+  }
+}
