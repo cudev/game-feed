@@ -23,7 +23,7 @@ Package is shipped with a few retrievers for popular providers such as [Spilgame
 
 ----
 
-To get games simply instantiate `Games` and pass retrievers to it.
+To get games, simply instantiate `Games` and pass retrievers to it.
 As mentioned above, `Games` is an `Iterator`, therefore directly iterate over it.
 ```php
 <?php
@@ -45,7 +45,7 @@ foreach ($games as $game) {
 }
 ```
 
-A received game might be in any format provided from API or RSS (JSON, XML or even PHP serialized), what is not quite useful
+A received game might be in any format from API or RSS (*usually, it's some sort of a string*), what is not quite useful
 most of a time. After `json_decode()`, for example:
 ```php
 array(10) {
@@ -66,8 +66,8 @@ array(10) {
   'category'    => string(6) "Action"
 }
 ```
-Shipped retrievers allow usage of a callable to transform unprocessed games to a desired format.
-An anonymous function in the example below will be called on every game,
+Shipped retrievers allow usage of special transformers (*callables*) for altering received games to a desired format.
+An anonymous function, in the example below, will be called on every game,
 though any class with `__invoke($unprocessedGame)` method signature can be used.
 ```php
 <?php
