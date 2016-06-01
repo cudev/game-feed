@@ -15,7 +15,7 @@ $ composer require cudev/game-feed
 ## Overview
 
 Package consists of a bunch of classes that implement `RetrieverInterface` and a `Games` class on its own.
-`Games` is a composite iterator of `RetrieverInterface` implementors.
+`Games` is a composite iterator of `RetrieverInterface` implementers.
 
 `RetrieverInterface` as simple as that:
 ```php
