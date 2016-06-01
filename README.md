@@ -47,7 +47,7 @@ use GameFeed\Retrievers\TwoPlayerGames;
 // classic way
 $games = new Games(new Spilgames(), new ArcadeGameFeed(), new TwoPlayerGames());
 
-// as for me, this one is more eloquent
+// in my opinion, this one is more eloquent
 $games = Games::from(new Spilgames(), new ArcadeGameFeed(), new TwoPlayerGames());
 
 /** @var array $game */
