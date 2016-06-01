@@ -59,7 +59,7 @@ foreach ($games as $game) {
 ---
 
 A received game might be in any format from API or RSS (*usually, it's some sort of a string*), what is not quite useful
-most of a time. After `json_decode()`, for example:
+most of a time. Using `Spilgames` (*JSON response*) with `json_decode($unprocessedGame, true)`, for example:
 ```php
 array(10) {
   'width'       => int(700)
@@ -77,6 +77,14 @@ array(10) {
   'gameUrl'     => string(53) "http://games.cdn.spilcloud.com/s/StackerWar_final.swf"
   'title'       => string(11) "Stacker War"
   'category'    => string(6) "Action"
+}
+```
+And after `ArcadeGameFeed` (*XML response*) with `simplexml_load_string($unprocessedGame, null, LIBXML_NOCDATA)`:
+```php
+class SimpleXMLElement#56 (3) {
+  public $title       => string(16) " Kings Castle 4 "
+  public $link        => string(57) " http://arcadegamefeed.com/view/2228/Kings-Castle-4.html "
+  public $description => string(609) " <img src='http://arcadegamefeed.com/img/agf-kings_castle-4180x135.jpg' > Dream up a situation that you are in "...
 }
 ```
 
