@@ -1,5 +1,5 @@
 # Game Feed
-**:video_game: Library for retrieving browser games from public feeds**
+###:video_game: Library for retrieving browser games from public feeds
 
 Package is shipped with a few retrievers for popular providers such as:
 - [Spilgames](http://www.spilgames.com/)
