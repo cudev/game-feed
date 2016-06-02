@@ -1,6 +1,13 @@
 # Game Feed
 **:video_game: Library for retrieving browser games from public feeds**
 
+Package is shipped with a few retrievers for popular providers such as:
+- [Spilgames](http://www.spilgames.com/)
+- [Arcade Game Feed](http://arcadegamefeed.com/)
+- [2PG](http://www.2pg.com/)
+
+Others can be easily added.
+
 ## Requirements
 - php 7
 - Guzzle 6
@@ -29,8 +36,6 @@ interface RetrieverInterface extends Countable
 ```
 Main purpose of the interface is to retrieve a game from a provider and `yield` it. An implementer must
 also be able to count all games from a provider.
-
-Package is shipped with a few retrievers for popular providers such as [Spilgames](http://www.spilgames.com/).
 
 ----
 
